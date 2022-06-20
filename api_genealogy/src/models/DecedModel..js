@@ -4,16 +4,16 @@ const Sequelize = require('sequelize');
 const Deced = db.define('deceds',{ 
     code:{
         type: { type:Sequelize.INTEGER},
-        allowNull: true,
+        allowNull: false,
         autoIncrement: true,
         primaryKey: true,
 
     },
     lieuDeced: { type:Sequelize.STRING},
-    dateDeced: { type:Sequelize.DATE},
-    resudencePrencipal:{ type:Sequelize.DATE},
-    resudenceActuel:{ type:Sequelize.DATE},
-    ocupation:{ type:Sequelize.DATE},
+    dateDeced: { type:Sequelize.DATEONLY},
+    resudencePrencipal:{ type:Sequelize.STRING},
+    resudenceActuel:{ type:Sequelize.STRING},
+    ocupation:{ type:Sequelize.STRING},
     motifDeced: { type:Sequelize.STRING},
     codePersonne:{ type:Sequelize.INTEGER},
 },
