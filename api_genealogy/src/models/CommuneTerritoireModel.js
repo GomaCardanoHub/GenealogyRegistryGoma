@@ -1,7 +1,7 @@
 const db = require('../../connect/index');
 const Sequelize = require('sequelize');
-const Province = require('./ProvinceModel.')
-const QuartieSecteur= require('./QuartieSecteurModel.')
+const Province = require('./ProvinceModel')
+const QuartieSecteur= require('./QuartieSecteurModel')
 
 const CommuneTerritoire = db.define('personnes',{ 
     code:{

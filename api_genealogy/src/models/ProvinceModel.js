@@ -1,6 +1,6 @@
 const db = require('../../connect/index');
 const Sequelize = require('sequelize');
-const CommuneTerritoire = require('./CommuneTerritoireModel.')
+const CommuneTerritoire = require('./CommuneTerritoireModel')
 
 const Province = db.define('personnes',{ 
     code:{

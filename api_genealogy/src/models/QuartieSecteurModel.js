@@ -1,6 +1,6 @@
 const db = require('../../connect/index');
 const Sequelize = require('sequelize');
-const CommuneTerritoire = require('./CommuneTerritoireModel.');
+const CommuneTerritoire = require('./CommuneTerritoireModel');
 const AvenueGroupement = require('./avenueGroupementModel')
 
 const QuartieSecteur = db.define('QuartieSecteurs',{ 
