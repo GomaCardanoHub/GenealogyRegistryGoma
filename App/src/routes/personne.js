@@ -15,7 +15,7 @@ route.get('/',(req,res)=>{
 route.post('/',(req,res)=>{
  
     const {nomComplet,sexe,dateNes,lieuNes,etatCivile,nationalite,genre,provinceDOrigine,CommuneTerritoirDOrigine,quartieSecteurDOrigine,avenueGroupementDOrigine,telphone,email} = res.body;
-    if(!nomComplet||!sexe||!dateNes||!lieuNes||!etatCivile||!nationalite||!genre||!provinceDOrigine||!CommuneTerritoirDOrigine||!quartieSecteurDOrigine||!avenueGroupementDOrigine||!telphone||!email)return res.status(4000).json({msg:'Remlisser tous les champs svp'});
+    if(!nomComplet||!sexe||!dateNes||!lieuNes||!etatCivile||!nationalite||!genre||!provinceDOrigine||!CommuneTerritoirDOrigine||!quartieSecteurDOrigine||!avenueGroupementDOrigine||!telphone||!email)return res.status(400).json({msg:'Remlisser tous les champs svp'});
     PersonneModel.create({nomComplet,sexe,dateNes,lieuNes,etatCivile,nationalite,genre,provinceDOrigine,CommuneTerritoirDOrigine,quartieSecteurDOrigine,avenueGroupementDOrigine,telphone,email})
     .then((data)=>{
         res.json(data)
