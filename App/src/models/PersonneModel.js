@@ -11,7 +11,6 @@ module.exports = (sequelize, DataTypes) => {
 
         },
         nomComplet: { type: DataTypes.STRING },
-        sexe: { type: DataTypes.STRING },
         dateNes: { type: DataTypes.DATEONLY },
         lieuNes: { type: DataTypes.STRING },
         etatCivile: { type: DataTypes.STRING },
