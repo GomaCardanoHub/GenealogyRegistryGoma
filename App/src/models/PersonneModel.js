@@ -1,30 +1,29 @@
-const db = require('../../connect/index');
-const Sequelize = require('sequelize');
+const { DataTypes } = require("sequelize/types");
 
-const Personne = db.define('personnes',{ 
-    code:{
-        type: { type:Sequelize.INTEGER},
-        allowNull: true,
-        autoIncrement: true,
-        primaryKey: true,
+module.exports = (sequelize, DataTypes) => {
 
-    },
-    nomComplet:{ type:Sequelize.STRING},
-    sexe: { type:Sequelize.STRING},
-    dateNes:{ type:Sequelize.DATEONLY},
-    lieuNes: { type:Sequelize.STRING},
-    etatCivile:{ type:Sequelize.STRING},
-    nationalite:{ type:Sequelize.STRING},
-    genre:{ type:Sequelize.STRING},
-    provinceDOrigine:{ type:Sequelize.STRING},
-    CommuneTerritoirDOrigine:{ type:Sequelize.STRING},
-    quartieSecteurDOrigine:{ type:Sequelize.STRING},
-    avenueGroupementDOrigine:{ type:Sequelize.STRING},
-    telphone: { type:Sequelize.STRING},
-    email:{ type:Sequelize.STRING},
+    const Personne = sequelize.define('Personnes', {
+        code: {
+            type: { type: DataTypes.INTEGER },
+            allowNull: true,
+            autoIncrement: true,
+            primaryKey: true,
+
+        },
+        nomComplet: { type: DataTypes.STRING },
+        sexe: { type: DataTypes.STRING },
+        dateNes: { type: DataTypes.DATEONLY },
+        lieuNes: { type: DataTypes.STRING },
+        etatCivile: { type: DataTypes.STRING },
+        nationalite: { type: DataTypes.STRING },
+        genre: { type: DataTypes.STRING },
+        provinceDOrigine: { type: DataTypes.STRING },
+        CommuneTerritoirDOrigine: { type: DataTypes.STRING },
+        quartieSecteurDOrigine: { type: DataTypes.STRING },
+        avenueGroupementDOrigine: { type: DataTypes.STRING },
+        telphone: { type: DataTypes.STRING },
+        email: { type: DataTypes.STRING },
   
-},
-{
-    timestamps: false
-});
-module.exports = Personne;
+    });
+    return Personne;
+}

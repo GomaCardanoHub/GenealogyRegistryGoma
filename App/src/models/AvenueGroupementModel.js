@@ -1,17 +1,15 @@
-const db = require('../../connect/index');
-const Sequelize = require('sequelize');
+module.exports = (sequelize, DataTypes) => {
+    const AvenueGroupement = sequelize.define('AvenueGroupements', {
+        code: {
+            type: { type: DataTypes.INTEGER },
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true,
 
-const AvenueGroupement = db.define('AvenueGroupements',{ 
-    code:{
-        type: { type:Sequelize.INTEGER},
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
+        },
+        designation: { type: DataTypes.STRING, allowNull: false }
 
-    },
-    designation:{ type:Sequelize.STRING, allowNull: false}
-},
-{
-        timestamps: false
-});
+    });
+    return AvenueGroupement;
+}  
     AvenueGroupement.belongsTo(CommuneTerritoire);

@@ -1,23 +1,21 @@
-const db = require('../../connect/index');
-const Sequelize = require('sequelize');
 
-const Deced = db.define('deceds',{ 
-    code:{
-        type: { type:Sequelize.INTEGER},
-        allowNull: false,
-        autoIncrement: true,
-        primaryKey: true,
 
-    },
-    lieuDeced: { type:Sequelize.STRING},
-    dateDeced: { type:Sequelize.DATEONLY},
-    resudencePrencipal:{ type:Sequelize.STRING},
-    resudenceActuel:{ type:Sequelize.STRING},
-    ocupation:{ type:Sequelize.STRING},
-    motifDeced: { type:Sequelize.STRING},
-    codePersonne:{ type:Sequelize.INTEGER},
-},
-{
-    timestamps: false
-});
-module.exports = Deced;
+module.export = (sequelize, DataTypes) => {
+    const Deced = sequelize.define('Deceds', {
+        code: {
+            type: { type: DataTypes.INTEGER },
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true,
+
+        },
+        lieuDeced: { type: DataTypes.STRING },
+        dateDeced: { type: DataTypes.DATEONLY },
+        resudencePrencipal: { type: DataTypes.STRING },
+        resudenceActuel: { type: DataTypes.STRING },
+        occupation: { type: DataTypes.STRING },
+        motifDeced: { type: DataTypes.STRING },
+        codePersonne: { type: DataTypes.INTEGER },
+    });
+    return Deced;
+}

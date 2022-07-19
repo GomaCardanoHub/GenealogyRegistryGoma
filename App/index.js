@@ -11,6 +11,10 @@ app.use(express.json());
 app.use('/api/personne', require('./src/routes/personne'));
 app.use('/api/mariage', require('./src/routes/mariage'));
 
+const config = require('./config/config');
+process.env.NODE_CONFIG_DIR = 'config'
+
 const port = process.env.PORT || 4000;
+
 
 app.listen(port, ()=>console.log(`server run on port ${port}...`));
