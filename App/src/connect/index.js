@@ -25,6 +25,13 @@ sequelize
 item.Sequelize = Sequelize
 item.sequelize = sequelize
 
+item.personne = require('../models/PersonneModel')(sequelize, DataTypes);
+item.mariage = require('../models/MariageModel')(sequelize, DataTypes);
+item.deced = require('../models/DecedModel')(sequelize, DataTypes);
+item.province = require('../models/ProvinceModel')(sequelize, DataTypes);
+item.commune = require('../models/CommuneTerritoireModel')(sequelize, DataTypes);
+item.quartier = require('../models/QuartieSecteurModel')(sequelize, DataTypes);
+item.avenue = require('../models/AvenueGroupementModel')(sequelize, DataTypes);
 
 
 
