@@ -1,4 +1,4 @@
-# Mobilize
+# Genealogy
 
 ## Project setup
 
