@@ -31,6 +31,7 @@ item.addMariage = async (req, res) => {
     return res.status(500).json({ msg: `${error}`, data: null })
   }
 }
+
 item.findAllMariage = async (req, res) => {
 
     try {

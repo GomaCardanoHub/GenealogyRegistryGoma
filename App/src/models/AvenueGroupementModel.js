@@ -12,4 +12,4 @@ module.exports = (sequelize, DataTypes) => {
     });
     return AvenueGroupement;
 }  
-    AvenueGroupement.belongsTo(CommuneTerritoire);
+   // AvenueGroupement.belongsTo(CommuneTerritoire);
