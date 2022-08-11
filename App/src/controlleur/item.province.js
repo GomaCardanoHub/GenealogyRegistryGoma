@@ -1,5 +1,4 @@
-const { province } = require('../database/databases')
-
+const {deced} = require('../connect/index');
 const item = {}
 
 item.addProvince = async (req, res) => {

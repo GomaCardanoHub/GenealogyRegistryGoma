@@ -29,7 +29,7 @@ item.addDeced=async(req,res)=>{
 
 }
 //Get all deceds
-item.findDeced = async (req, res) => {
+item.findAllDeced = async (req, res) => {
   try {
     const data = await deced.findAll()
     if (data) {

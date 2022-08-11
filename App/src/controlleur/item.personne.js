@@ -1,5 +1,4 @@
-const {personne} = require('../models/ProvinceModel');
-
+const {deced} = require('../connect/index');
 const item = {}
 
 //Create a personne

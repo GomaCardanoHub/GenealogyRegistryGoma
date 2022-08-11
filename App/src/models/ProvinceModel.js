@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Province = db.define('personnes', {
+    const Province = sequelize.define('Provinces', {
         code: {
             type: { type: DataTypes.INTEGER },
             allowNull: false,
@@ -12,4 +12,4 @@ module.exports = (sequelize, DataTypes) => {
     });
     return Province;
 }
-Province.hasMany(CommuneTerritoire, {foreignKey: 'communeTerritoireId'});
+//Province.hasMany(CommuneTerritoire, {foreignKey: 'communeTerritoireId'});

@@ -1,6 +1,4 @@
-
-
-module.export = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
     const Deced = sequelize.define('Deceds', {
         code: {
             type: { type: DataTypes.INTEGER },

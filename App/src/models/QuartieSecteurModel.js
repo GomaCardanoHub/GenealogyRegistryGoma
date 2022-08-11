@@ -1,16 +1,16 @@
 module.exports = (sequelize, DataTypes) => {
-    const QuartieSecteur = db.define('QuartieSecteurs', {
+    const QuartieSecteur = sequelize.define('QuartieSecteurs', {
         code: {
-            type: { type: Sequelize.INTEGER },
+            type: { type: DataTypes.INTEGER },
             allowNull: false,
             autoIncrement: true,
             primaryKey: true,
 
         },
-        designation: { type: Sequelize.STRING, allowNull: false }
+        designation: { type: DataTypes.STRING, allowNull: false }
 
     });
 }
 
-    QuartieSecteur.belongsTo(CommuneTerritoire);
-    QuartieSecteur.hasMany(AvenueGroupement, {foreignKey: 'AvenueGroupementId'});
+   // QuartieSecteur.belongsTo(CommuneTerritoire);
+   // QuartieSecteur.hasMany(AvenueGroupement, {foreignKey: 'AvenueGroupementId'});

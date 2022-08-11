@@ -1,21 +1,21 @@
 module.exports=(sequelize,DataTypes) => {
     const Mariage = sequelize.define('Mariages',{ 
         code:{
-            type: { type:Sequelize.INTEGER},
+            type: { type:DataTypes.INTEGER},
             allowNull: true,
             autoIncrement: true,
             primaryKey: true,
 
         },
-        lieuMariage: { type:Sequelize.STRING},
-        dateMariage: { type:Sequelize.DATEONLY, defaultValue:Sequelize.DataTypes.NOW},
-        resudencePrencipal:{ type:Sequelize.STRING},
-        resudenceActuel:{ type:Sequelize.STRING},
-        ocupation:{ type:Sequelize.STRING},
-        regime: { type:Sequelize.STRING},
-        dote: { type:Sequelize.STRING},
-        codePersonne:{ type:Sequelize.INTEGER},
-        codePersonneConjoint:{ type:Sequelize.INTEGER},
+        lieuMariage: { type:DataTypes.STRING},
+        dateMariage: { type:DataTypes.DATEONLY, defaultValue:DataTypes.NOW},
+        resudencePrencipal:{ type:DataTypes.STRING},
+        resudenceActuel:{ type:DataTypes.STRING},
+        ocupation:{ type:DataTypes.STRING},
+        regime: { type:DataTypes.STRING},
+        dote: { type:DataTypes.STRING},
+        codePersonne:{ type:DataTypes.INTEGER},
+        codePersonneConjoint:{ type:DataTypes.INTEGER},
 
     });
     return Mariage;

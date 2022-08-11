@@ -1,5 +1,4 @@
-const { quartier } = require('../database/databases')
-
+const {deced} = require('../connect/index');
 const item = {}
 
 item.addQuartier= async (req, res) => {
