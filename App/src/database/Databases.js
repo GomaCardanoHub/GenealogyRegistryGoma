@@ -24,12 +24,14 @@ sequelize
 item.Sequelize = Sequelize
 item.sequelize = sequelize
 
-item.participant = require(`../model/ModelParticipant`)(sequelize, DataTypes)
-item.participer = require(`../model/ModelParticiper`)(sequelize, DataTypes)
-item.budget = require(`../model/ModelBudget`)(sequelize, DataTypes)
-item.zone = require(`../model/ModelZone`)(sequelize, DataTypes)
-item.organisation = require(`../model/ModelOrganisation`)(sequelize, DataTypes)
-item.evenement = require(`../model/ModelEvenement`)(sequelize, DataTypes)
+item.personne = require(`../model/ModelPersonne`)(sequelize, DataTypes)
+item.mariage = require(`../model/ModelMariage`)(sequelize, DataTypes)
+item.deced = require(`../model/ModelDeced`)(sequelize, DataTypes)
+item.province = require(`../model/ModelProvince`)(sequelize, DataTypes)
+item.villeTerritoir = require(`../model/ModelVilleTerritoir`)(sequelize, DataTypes)
+item.communesecteurchefferie = require(`../model/ModelCommuneSecteurChefferies`)(sequelize, DataTypes)
+item.quartiercollectivite = require(`../model/ModelQuartierCollectivite`)(sequelize, DataTypes)
+item.avenuegroupement = require(`../model/ModelAvenueGroupement`)(sequelize, DataTypes)
 item.users = require(`../model/ModelUser`)(sequelize, DataTypes)
 item.agents = require(`../model/ModelAgent`)(sequelize, DataTypes)
 
