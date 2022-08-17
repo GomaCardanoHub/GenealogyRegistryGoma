@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
         resudenceActuel: DataTypes.STRING,
         occupation: DataTypes.STRING ,
         motifDeced: DataTypes.STRING ,
-        codePersonne:  DataTypes.INTEGER ,NTEGER,
+        codePersonne:  DataTypes.INTEGER ,
     });
     return deced;
 }

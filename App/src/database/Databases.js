@@ -36,7 +36,7 @@ item.users = require(`../model/ModelUser`)(sequelize, DataTypes)
 item.agents = require(`../model/ModelAgent`)(sequelize, DataTypes)
 
 item.sequelize
-  .sync({ force: true })
+  .sync({ force: false })
   .then(() => {
     console.log(`Yes re-sync done...`)
   })
